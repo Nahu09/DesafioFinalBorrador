@@ -1,0 +1,9 @@
+<h3>{{producto.nombre}}</h3>
+    <p>{{producto.precio}}</p>
+
+    {% if producto.image %}
+        <img src="{{producto.image.url}}" alt="">
+       
+    {% endif %}
+<button><a href="{% url 'updatetv_view' producto.id %}">Editar</a></button>
+<button><a href="{% url 'deletetv_view' producto.id %}">Eliminar</a></button>
